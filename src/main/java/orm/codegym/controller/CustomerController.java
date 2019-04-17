@@ -18,7 +18,7 @@ import java.util.List;
 public class CustomerController {
 
     @Autowired
-    private CustomerService customerService = new CustomerServiceImpl();
+    private CustomerService customerService;
 
     @GetMapping("/create-customer")
     public ModelAndView showCreateForm(){
@@ -39,7 +39,7 @@ public class CustomerController {
 
     @GetMapping("/customers")
     public ModelAndView listCustomers(){
-        List<Customer> customers = customerService.findAll();
+        Iterable<Customer> customers = customerService.findAll();
         ModelAndView modelAndView = new ModelAndView("/customer/list");
         modelAndView.addObject("customers", customers);
         return modelAndView;
