@@ -22,7 +22,6 @@ import org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring4.view.ThymeleafViewResolver;
 import org.thymeleaf.templatemode.TemplateMode;
 import orm.codegym.repository.CustomerRepository;
-import orm.codegym.repository.impl.CustomerRepositoryImpl;
 import orm.codegym.service.CustomerService;
 import orm.codegym.service.impl.CustomerServiceImpl;
 
